@@ -96,7 +96,7 @@ th {
 }
 
 tbody tr:hover {
-    background-color: #0056b3;
+    background-color: #218838;
 }
 
 /* Dark Mode Table Styles */
@@ -111,4 +111,8 @@ table.dark-mode {
 
 td.dark-mode {
     border-bottom: 1px solid #555;
+}
+
+.dark-mode tbody tr:hover {
+    background-color: #0056b3;
 }
