@@ -12,7 +12,7 @@ document.getElementById('fetchButton').addEventListener('click', function() {
         .then(data => {
             if (data[cryptoInput]) {
                 const price = data[cryptoInput].usd;
-                priceDisplay.innerHTML = `${cryptoInput.charAt(0).toUpperCase() + cryptoInput.slice(1)} Price: ${price}`;
+                priceDisplay.innerHTML = `${cryptoInput.charAt(0).toUpperCase() + cryptoInput.slice(1)} Price: $${price}`;
             } else {
                 priceDisplay.innerHTML = 'Cryptocurrency not found. Please try again.';
             }
@@ -58,7 +58,7 @@ function fetchTopCryptos() {
                     <td>${index + 1}</td>
                     <td>${crypto.name}</td>
                     <td>${crypto.symbol.toUpperCase()}</td>
-                    <td>${crypto.current_price.toFixed(2)}</td>
+                    <td>$${crypto.current_price.toFixed(2)}</td>
                 `;
                 tableBody.appendChild(row);
             });
